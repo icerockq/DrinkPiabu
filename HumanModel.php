@@ -1,25 +1,50 @@
-<?php 
-Class Human{
-    
-    public function haveDrink(Drink $drink){
-        $typeDrink = $drink->getType();
-        if($typeDrink){
-            echo 'Вы выпили '.$typeDrink;
-        }else{
+<?php
+
+/**
+ * Class Human
+ */
+class Human
+{
+    /**
+     * @param Drink $drink
+     */
+    public function haveDrink(Drink $drink): void
+    {
+        if ($typeDrink = $drink->getType()) {
+            echo 'Вы выпили ' . $typeDrink;
+        } else {
             echo 'Для начала необходимо выбрать, что вы будете пить';
         }
     }
 }
 
-Class Drink{
+/**
+ * Class Drink
+ */
+class Drink
+{
+    /**
+     * @var string
+     */
+    protected $type;
 
-    private $type;
-
-    public function setType($type){
+    /**
+     * @param string $type
+     *
+     * @return Drink
+     */
+    public function setType(string $type): Drink
+    {
         $this->type = $type;
+
+        return $this;
     }
 
-    public function getType(){
+    /**
+     * @return string
+     */
+    public function getType(): string
+    {
         return $this->type;
     }
 }
@@ -29,5 +54,3 @@ $drink = new Drink();
 
 $drink->setType('Сок');
 $human->haveDrink($drink);
-
-?>
