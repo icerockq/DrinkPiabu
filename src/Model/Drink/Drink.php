@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Model\Drink;
+
 abstract class Drink
 {
     /**
