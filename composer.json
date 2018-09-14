@@ -1,0 +1,14 @@
+{
+  "name": "pikabu/day-256",
+  "type": "project",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pikabu\\Day256\\": "source/"
+    }
+  }
+}
